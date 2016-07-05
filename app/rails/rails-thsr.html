@@ -1,0 +1,31 @@
+<ion-list class="ion-list-no-bottom">
+    <ion-item>
+        <ion-label>起站</ion-label>
+        <ion-select [(ngModel)]="startStation">
+        <ion-option value="1">台北</ion-option>
+        <ion-option value="2">松山</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>訖站</ion-label>
+        <ion-select [(ngModel)]="endStation">
+        <ion-option value="1">台北</ion-option>
+        <ion-option value="2">松山</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>查詢日期</ion-label>
+        <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="queryDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-label>查詢時間（起）</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="queryStartTime"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-label>查詢時間（訖）</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="queryEndTime"></ion-datetime>
+    </ion-item>
+</ion-list>
+<div padding>
+    <button primary block>查詢</button>
+</div>

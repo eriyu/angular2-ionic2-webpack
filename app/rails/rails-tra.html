@@ -1,0 +1,67 @@
+<ion-list class="ion-list-no-bottom">
+    <ion-item>
+        <div class="ion-label-text">出發</div>
+        <div>
+            <ion-grid>
+                <ion-row>
+                    <ion-col width-50>
+                        <ion-item>
+                            <ion-select class="ion-select-full">
+                                <ion-option value="1">台北</ion-option>
+                                <ion-option value="2">松山</ion-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col width-50>
+                        <ion-item>
+                            <ion-select class="ion-select-full">
+                                <ion-option value="1">台北</ion-option>
+                                <ion-option value="2">松山</ion-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </ion-item>
+    <ion-item>
+        <div class="ion-label-text">抵達</div>
+        <div>
+            <ion-grid>
+                <ion-row>
+                    <ion-col width-50>
+                        <ion-item>
+                            <ion-select class="ion-select-full">
+                                <ion-option value="1">台北</ion-option>
+                                <ion-option value="2">松山</ion-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col width-50>
+                        <ion-item>
+                            <ion-select class="ion-select-full">
+                                <ion-option value="1">台北</ion-option>
+                                <ion-option value="2">松山</ion-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </ion-item>
+    <ion-item>
+        <ion-label>查詢日期</ion-label>
+        <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="queryDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-label>查詢時間（起）</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="queryStartTime"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-label>查詢時間（訖）</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="queryEndTime"></ion-datetime>
+    </ion-item>
+</ion-list>
+<div padding>
+    <button primary block>查詢</button>
+</div>

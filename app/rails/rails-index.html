@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar no-border-bottom>
+    <ion-title>
+      台高鐵班次資訊
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar [attr.primary]="isAndroid ? '' : null" no-border-top>
+    <ion-segment [(ngModel)]="railType" [attr.light]="isAndroid ? '' : null">
+      <ion-segment-button value="tra">台鐵</ion-segment-button>
+      <ion-segment-button value="thsr">高鐵</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="railType">
+    <div *ngSwitchCase="'tra'">
+        <rails-tra></rails-tra>
+    </div>
+    <div *ngSwitchCase="'thsr'">
+        <rails-thsr></rails-thsr>
+    </div>
+  </div>
+</ion-content>

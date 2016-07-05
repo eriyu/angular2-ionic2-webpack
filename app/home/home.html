@@ -1,5 +1,12 @@
-<ion-navbar *navbar>
-    <ion-title>Home</ion-title>
+<ion-navbar *navbar class="bar-danger">
+    <ion-title>便利資訊</ion-title>
 </ion-navbar>
-
-<ion-content>Hello World</ion-content>
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let fnitem of fnlist | async" (click)="goToContentPage(fnitem.enname)">
+            <ion-icon name="paper" item-left></ion-icon>
+            {{fnitem.chname}}
+            <ion-icon name="arrow-forward" item-right></ion-icon>
+        </ion-item>
+    </ion-list>
+</ion-content>

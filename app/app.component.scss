@@ -1,0 +1,18 @@
+$font-path: "~ionic-angular/fonts/";
+
+@import "~theme/app.variables";
+@import "~ionic-angular/ionic.ios";
+
+.ion-select-full {
+    width:100%;
+    max-width: 100%;
+}
+
+.ion-list-no-bottom {
+    margin-bottom:0;
+}
+
+.ion-label-text{
+    color:$label-ios-text-color;
+}
+
