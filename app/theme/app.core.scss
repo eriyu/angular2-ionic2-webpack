@@ -1,7 +1,18 @@
 $font-path: "~ionic-angular/fonts/";
 
 @import "./app.variables";
+@import "./app.sprites.scss";
 @import "~ionic-angular/ionic.ios";
+
+.icon {
+  display: inline-block;
+}
+
+.ion-item-text{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 32px;
+}
 
 .ion-select-full {
     width:100%;

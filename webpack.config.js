@@ -56,7 +56,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'], {}),
+    //new CleanWebpackPlugin(['dist'], {}),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin({ name: ['app', 'vendor', 'polyfills'], minChunks: Infinity }),
     new ExtractTextPlugin("styles.css")
   ]
