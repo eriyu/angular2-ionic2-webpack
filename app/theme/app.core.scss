@@ -1,6 +1,6 @@
 $font-path: "~ionic-angular/fonts/";
 
-@import "~theme/app.variables";
+@import "./app.variables";
 @import "~ionic-angular/ionic.ios";
 
 .ion-select-full {
@@ -15,4 +15,3 @@ $font-path: "~ionic-angular/fonts/";
 .ion-label-text{
     color:$label-ios-text-color;
 }
-

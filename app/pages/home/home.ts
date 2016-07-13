@@ -2,15 +2,15 @@ import { Component,OnInit} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {NewsIndex} from "../news/news-index";
 import {RailsIndex} from "../rails/rails-index";
-import {AppFunctionListService } from '../service/app.function.list.service';
-import {FirebaseListObservable} from 'angularfire2';
+import {AppFunctionListService } from '../../service/app.function.list.service';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
-  templateUrl:"app/home/home.html"
+  templateUrl:"app/pages/home/home.html"
 })
 export class HomePage implements OnInit {
 
-  fnlist: FirebaseListObservable<any[]>;
+  fnlist: Observable<any[]>;
 
   constructor(private nav: NavController,private fnlistService: AppFunctionListService){}
 

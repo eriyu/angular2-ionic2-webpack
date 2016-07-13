@@ -4,7 +4,7 @@
 <ion-content>
     <ion-list>
         <ion-item *ngFor="let fnitem of fnlist | async" (click)="goToContentPage(fnitem.enname)">
-            <ion-icon name="paper" item-left></ion-icon>
+            <i class="icon icon-news"></i>
             {{fnitem.chname}}
             <ion-icon name="arrow-forward" item-right></ion-icon>
         </ion-item>

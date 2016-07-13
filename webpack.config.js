@@ -1,40 +1,52 @@
 var webpack = require("webpack");
 var path = require("path");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
+  resolve: {
+    extensions: ['', '.js', '.ts', '.css', '.scss'],
+    modulesDirectories:['node_modules','app']
+  },
   entry: {
-    'vendor':[
-        'config/rAF.js',
-        'core-js/client/shim.js',
-        'zone.js/dist/zone.js',
-        'reflect-metadata/Reflect.js',
-        'systemjs/dist/system-register-only.js',
-        '@angular/core/index.js',
-        'ionic-angular/index.js',
-        'angularfire2/angularfire2.js',
-        'firebase/firebase.js'
+    'polyfills':[
+      'polyfills/rAF.js',
+      'core-js/client/shim.js',
+      'zone.js/dist/zone.js',
+      'reflect-metadata/Reflect.js'
     ],
-    'main': './app/main.ts'
+    'vendor':[
+      'systemjs/dist/system-register-only.js',
+      '@angular/core/index.js',
+      'ionic-angular/index.js',
+      'angularfire2/angularfire2.js',
+      'firebase/firebase.js'      
+    ],
+    'app': ['webpack/hot/dev-server','main.ts']
   },
   output: {
-    path: __dirname,
-    filename: "./dist/[name].bundle.js"
-  },
-  resolve: {
-    extensions: ['', '.js', '.ts'],
-    modulesDirectories:['node_modules','app']
+    path: __dirname + "/dist",
+    filename: "[name].bundle.js"
   },
   devtool: 'source-map',
   module: {
     loaders: [
       {
+        test: /\.html$/,
+        loaders: ['raw-loader']
+      },
+      {
         test: /\.ts/,
         loaders: ['ts-loader'],
         exclude: /node_modules/
       },
-      { test: /\.scss$/, loaders: ['style','css','postcss','sass?sourceMap']},
-      { test: /\.woff(2)?(\?v=.+)?$/, loader: "url?limit=10000&mimetype=application/font-woff&name=dist/fonts/[hash].[ext]" },
-      { test: /\.(ttf|eot|svg)(\?v=.+)?$/, loader: 'file?name=dist/fonts/[hash].[ext]' }
+      { test: /\.scss$/, loader: ExtractTextPlugin.extract("style", "css!postcss!sass?sourceMap")},
+      { test: /\.woff(2)?(\?v=.+)?$/, loader: "url?limit=10000&mimetype=application/font-woff&name=fonts/[hash].[ext]" },
+      { test: /\.(ttf|eot|svg)(\?v=.+)?$/, loader: 'file?name=fonts/[hash].[ext]' },
+      {
+        test:/\.(png|jpg|jpeg|gif)$/,
+        loader:"url?limit=1024&name=images/[name].[ext]"
+      }
     ]
   },
   sassLoader:{
@@ -44,5 +56,8 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist'], {}),
+    new webpack.optimize.CommonsChunkPlugin({ name: ['app', 'vendor', 'polyfills'], minChunks: Infinity }),
+    new ExtractTextPlugin("styles.css")
   ]
 }

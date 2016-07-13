@@ -1,6 +1,6 @@
-import {ionicBootstrap} from 'ionic-angular';
+import { ionicBootstrap } from 'ionic-angular';
 import { AppComponent } from './app.component';
-import {FIREBASE_PROVIDERS, defaultFirebase} from 'angularfire2';
+import { FIREBASE_PROVIDERS, defaultFirebase } from 'angularfire2';
 
 ionicBootstrap(
     AppComponent,

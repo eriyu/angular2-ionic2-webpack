@@ -1,0 +1,150 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-airline {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -32px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-bankcode {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -96px -64px;
+  width: 32px;
+  height: 32px;
+}
+.icon-bookast {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -32px;
+  width: 32px;
+  height: 32px;
+}
+.icon-bus {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -32px -32px;
+  width: 32px;
+  height: 32px;
+}
+.icon-buztoday {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -64px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-discount {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -64px -32px;
+  width: 32px;
+  height: 32px;
+}
+.icon-food {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -64px;
+  width: 32px;
+  height: 32px;
+}
+.icon-invoice {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -32px -64px;
+  width: 32px;
+  height: 32px;
+}
+.icon-ipeenrss {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -64px -64px;
+  width: 32px;
+  height: 32px;
+}
+.icon-kbus {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -96px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-krtco {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -96px -32px;
+  width: 32px;
+  height: 32px;
+}
+.icon-lottery {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-lunarcal {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -96px;
+  width: 32px;
+  height: 32px;
+}
+.icon-news {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -32px -96px;
+  width: 32px;
+  height: 32px;
+}
+.icon-parking {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -64px -96px;
+  width: 32px;
+  height: 32px;
+}
+.icon-rail {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -96px -96px;
+  width: 32px;
+  height: 32px;
+}
+.icon-taxi {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -128px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-theater {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -128px -32px;
+  width: 32px;
+  height: 32px;
+}
+.icon-traffic {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -128px -64px;
+  width: 32px;
+  height: 32px;
+}
+.icon-trtc {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -128px -96px;
+  width: 32px;
+  height: 32px;
+}
+.icon-ubike {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -128px;
+  width: 32px;
+  height: 32px;
+}
+.icon-weather {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -32px -128px;
+  width: 32px;
+  height: 32px;
+}

@@ -4,7 +4,7 @@ import { RailsTHSR } from '../rails/rails-thsr';
 import { RailsTRA  } from '../rails/rails-tra';
 
 @Component({
-  templateUrl: 'app/rails/rails-index.html',
+  templateUrl: 'app/pages/rails/rails-index.html',
   directives: [RailsTHSR,RailsTRA] 
 })
 export class RailsIndex {
